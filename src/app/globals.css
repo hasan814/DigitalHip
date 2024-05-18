@@ -1,3 +1,11 @@
+:root {
+  --bg: #0d0c22;
+  --bgSoft: #2d2b42;
+  --text: #fff;
+  --textSoft: #e5e5e5;
+  --btn: #3673fd;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +15,53 @@
   list-style: none;
   text-decoration: none;
   transition: all 0.2s linear;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    width: 1366px;
+  }
+}
+@media (max-width: 1366px) {
+  .container {
+    width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: 475px;
+  }
 }
