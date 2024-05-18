@@ -12,7 +12,7 @@
       "@/templates/*": ["src/components/templates/*"],
       "@/modules/*": ["src/components/modules/*"],
       "@/elements/*": ["src/components/elements/*"],
-      "@/icons/*": ["src/components/icons/*"]
+      "@/icons/*": ["src/components/icons/*"],
       "@/layout/*": ["src/components/layout/*"]
     }
   }
