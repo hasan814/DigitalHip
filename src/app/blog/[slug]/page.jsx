@@ -1,5 +1,16 @@
 import SinglePostPage from "@/components/templates/SinglePostPage";
 
+export async function generateMetadata({ params }) {
+  // ========= Read route params ==========
+  const id = params.id;
+
+  // =========== Fetch data ============
+  const response = await fetch(`https://.../${id}`);
+  const product = await response.json();
+
+  return { title: product.title };
+}
+
 const SinglePost = () => {
   return <SinglePostPage />;
 };
