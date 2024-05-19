@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from "uuid";
-import { getData } from "@/utils/Fetch";
 
 import BlogPage from "@/components/templates/Blog/BlogPage";
 import styles from "./Blog.module.css";

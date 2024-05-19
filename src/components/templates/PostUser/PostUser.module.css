@@ -1,5 +1,14 @@
 .container {
   display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.texts {
+  display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
