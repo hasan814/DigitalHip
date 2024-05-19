@@ -1,18 +1,16 @@
 import SinglePostPage from "@/components/templates/SinglePost/SinglePostPage";
+import { getPost } from "@/utils/data";
+import { getDataById } from "@/utils/Fetch";
 
-// export async function generateMetadata({ params }) {
-//   // ========= Read route params ==========
-//   const id = params.id;
+const SinglePost = async ({ params: { slug } }) => {
+  // =========== With API ===============
+  // const post = await getDataById(slug);
 
-//   // =========== Fetch data ============
-//   const response = await fetch(`/${id}`);
-//   const product = await response.json();
+  // =========== Without API ===============
+  const post = await getPost(slug);
 
-//   return { title: product.title };
-// }
-
-const SinglePost = () => {
-  return <SinglePostPage />;
+  // =========== Rendering ===============
+  return <SinglePostPage post={post} />;
 };
 
 export default SinglePost;

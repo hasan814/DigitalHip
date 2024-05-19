@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./BlogPage.module.css";
 import Link from "next/link";
 
-const BlogPage = () => {
+const BlogPage = ({ post }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -17,13 +17,9 @@ const BlogPage = () => {
         <span className={styles.date}>01.01.2024</span>
       </div>
       <div className={styles.bottom}>
-        <h1 className={styles.title}>Title</h1>
-        <p className={styles.desc}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil illum
-          obcaecati autem voluptates vel amet aperiam magnam ducimus dolorem
-          quos?
-        </p>
-        <Link className={styles.link} href={"/blog/post"}>
+        <h1 className={styles.title}>{post.title}</h1>
+        <p className={styles.desc}>{post.body}</p>
+        <Link className={styles.link} href={`/blog/${post.id}`}>
           READ MORE
         </Link>
       </div>
