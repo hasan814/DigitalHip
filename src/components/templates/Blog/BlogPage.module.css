@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.top {
+  display: flex;
+}
+.imgContainer {
+  width: 90%;
+  height: 400px;
+  position: relative;
+}
+.img {
+  object-fit: cover;
+}
+
+.date {
+  font-size: 0.7rem;
+  transform: rotate(270deg);
+  margin: auto;
+}
+
+.title {
+  width: 90%;
+
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+.desc {
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+  color: gray;
+  width: 90%;
+}
+.link {
+  border: 0.1rem solid var(--text);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+}
+.link:hover {
+  border-color: var(--btn);
+  color: var(--btn);
+}

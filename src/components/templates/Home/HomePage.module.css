@@ -43,3 +43,25 @@
 .heroImg {
   object-fit: contain;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .btns {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .textContainer h1 {
+    font-size: 2rem;
+  }
+  .brands {
+    width: 100%;
+  }
+}

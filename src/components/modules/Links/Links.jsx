@@ -2,10 +2,11 @@
 
 import { v4 as uuidv4 } from "uuid";
 import { PageLinks } from "@/utils/helper";
+import { useState } from "react";
 
 import styles from "./Links.module.css";
 import NavLink from "../NavLink/NavLink";
-import { useState } from "react";
+import Image from "next/image";
 
 const Links = () => {
   // ========= Temp ==========
@@ -31,12 +32,14 @@ const Links = () => {
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-      <button
+      <Image
+        src={"/menu.png"}
+        alt="menu"
+        width={30}
+        height={30}
         className={styles.menuBtn}
         onClick={() => setOpen((prev) => !prev)}
-      >
-        Menu
-      </button>
+      />
       {open && (
         <div className={styles.mobileLinks}>
           {PageLinks.map((link) => (
