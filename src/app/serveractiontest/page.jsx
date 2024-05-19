@@ -1,4 +1,4 @@
-import { addPost } from "@/utils/action";
+import { addPost, deletePost } from "@/utils/action";
 
 const ServerActionTestPage = () => {
   return (

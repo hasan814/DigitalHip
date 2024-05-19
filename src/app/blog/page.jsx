@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import BlogPage from "@/components/templates/Blog/BlogPage";
 import styles from "./Blog.module.css";
 import { getPosts } from "@/utils/data";
+import { getData } from "@/utils/Fetch";
 
 export const metadata = {
   title: "Blog Page",
@@ -11,10 +12,10 @@ export const metadata = {
 
 const Blog = async () => {
   // =========== With API =============
-  // const posts = await getData();
+  const posts = await getData();
 
   // =========== Without API =============
-  const posts = await getPosts();
+  // const posts = await getPosts();
 
   // =========== Rendering =============
   return (

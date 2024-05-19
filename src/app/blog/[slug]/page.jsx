@@ -1,21 +1,23 @@
 import SinglePostPage from "@/components/templates/SinglePost/SinglePostPage";
-import { getPost } from "@/utils/data";
+import { getDataById } from "@/utils/Fetch";
+// import { getPost } from "@/utils/data";
 
-export const generateMetadata = async ({ params }) => {
+// export const generateMetadata = async ({ params }) => {
+//   const { slug } = params;
+//   const post = await getPost(slug);
+//   return {
+//     title: post.title,
+//     description: post.desc,
+//   };
+// };
+
+const SinglePost = async ({ params }) => {
   const { slug } = params;
-  const post = await getPost(slug);
-  return {
-    title: post.title,
-    description: post.desc,
-  };
-};
-
-const SinglePost = async ({ params: { slug } }) => {
   // =========== With API ===============
-  // const post = await getDataById(slug);
+  const post = await getDataById(slug);
 
   // =========== Without API ===============
-  const post = await getPost(slug);
+  // const post = await getPost(slug);
 
   // =========== Rendering ===============
   return <SinglePostPage post={post} />;
