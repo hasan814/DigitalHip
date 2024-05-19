@@ -1,6 +1,14 @@
 import SinglePostPage from "@/components/templates/SinglePost/SinglePostPage";
 import { getPost } from "@/utils/data";
-import { getDataById } from "@/utils/Fetch";
+
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
+  const post = await getPost(slug);
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+};
 
 const SinglePost = async ({ params: { slug } }) => {
   // =========== With API ===============

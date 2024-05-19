@@ -2,7 +2,7 @@ import ContactPage from "@/components/templates/Contact/ContactPage";
 
 export const metadata = {
   title: "Conatct Page",
-  description: "...",
+  description: "Contact description",
 };
 
 const Contact = () => {
