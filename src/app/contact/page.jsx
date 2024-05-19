@@ -1,7 +1,7 @@
-import ContactPage from "@/components/templates/ContactPage";
+import ContactPage from "@/components/templates/Contact/ContactPage";
 
 export const metadata = {
-  title: "...",
+  title: "Conatct Page",
   description: "...",
 };
 
