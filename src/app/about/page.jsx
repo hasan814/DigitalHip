@@ -1,8 +1,8 @@
-import AboutPage from "@/components/templates/AboutPage";
+import AboutPage from "@/components/templates/About/AboutPage";
 
 export const metadata = {
-  title: "...",
-  description: "...",
+  title: "About Page",
+  description: "We create digital ideas",
 };
 
 const About = () => {

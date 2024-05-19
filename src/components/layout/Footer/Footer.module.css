@@ -1,0 +1,20 @@
+.container {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--btn);
+}
+.text {
+  font-size: 0.8rem;
+}
+.text p span {
+  color: var(--btn);
+  text-transform: uppercase;
+  font-weight: bold;
+}
