@@ -1,8 +1,9 @@
 "use server";
 
-import { Post } from "@/models/Post";
-import { connectDB } from "./connectDB";
+import { signIn, signOut } from "./auth";
 import { revalidatePath } from "next/cache";
+import { connectDB } from "./connectDB";
+import { Post } from "@/models/Post";
 
 export const addPost = async (formData) => {
   const { title, desc, slug, userId } = Object.fromEntries(formData);
@@ -36,4 +37,14 @@ export const deletePost = async (formData) => {
     console.log(error);
     return { error: "Something went wrong!" };
   }
+};
+
+export const handlerGithubLogin = async () => {
+  "use server";
+  await signIn("github");
+};
+
+export const handleLogout = async () => {
+  "use server";
+  await signOut();
 };

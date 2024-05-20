@@ -1,5 +1,6 @@
 "use client";
 
+import { handleLogout } from "@/utils/action";
 import { v4 as uuidv4 } from "uuid";
 import { PageLinks } from "@/utils/helper";
 import { useState } from "react";
@@ -8,9 +9,8 @@ import styles from "./Links.module.css";
 import NavLink from "../NavLink/NavLink";
 import Image from "next/image";
 
-const Links = () => {
+const Links = ({ session }) => {
   // ========= Temp ==========
-  const session = true;
   const isAdmin = true;
 
   // ========= State ==========
@@ -23,10 +23,14 @@ const Links = () => {
         {PageLinks.map((link) => (
           <NavLink key={uuidv4()} item={link} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}{" "}
-            <button className={styles.logout}>Logout</button>
+            {session.user?.isAdmin && (
+              <NavLink item={{ title: "Admin", path: "/admin" }} />
+            )}{" "}
+            <form action={handleLogout}>
+              <button className={styles.logout}>Logout</button>
+            </form>
           </>
         ) : (
           <NavLink item={{ title: "Login", path: "/login" }} />
