@@ -1,8 +1,9 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { v4 as uuidv4 } from "uuid";
+import { PERKS } from "@/config";
+
 import MaxWidthWrapper from "@/components/templates/MaxWidthWrapper";
 import Link from "next/link";
-import { perks } from "@/utils/helper";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
       <section className="border-t border-gray-200 bg-gray-50">
         <MaxWidthWrapper className="py-20">
           <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
-            {perks.map((perk) => (
+            {PERKS.map((perk) => (
               <div
                 className="text-center md:flex md:items-start md:text-left lg:block lg:text-center "
                 key={uuidv4()}
